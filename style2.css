@@ -1,0 +1,266 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.divcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  border-top: 1px solid #cdcfd3;
+}
+
+.divcontainer span {
+  display: inline-block;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.list-new:first-child {
+  border-left: 1px solid #cdcfd3;
+}
+.list-new {
+  border-right: 1px solid #cdcfd3;
+}
+
+.list-new.active {
+  background: green;
+  color: #fff;
+}
+.list-new .nu {
+  background: #fff;
+  color: #09a223;
+}
+
+.divcontainer a,
+.divcontainer p {
+  display: none;
+}
+
+.baslik {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .list-new {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px 10px 20px;
+    flex-direction: column;
+    max-width: 180px;
+    height: 100%;
+  }
+  .divcontainer a,
+  .divcontainer p {
+    display: block;
+  }
+  .list-new span {
+    display: none;
+  }
+  .baslik {
+    font-size: 19px;
+  }
+  .lorem {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-new {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px 10px 20px;
+    flex-direction: row;
+    max-width: 240px;
+    height: 100%;
+    position: relative;
+    padding-bottom: 40px;
+  }
+  .divcontainer a,
+  .divcontainer p {
+    display: block;
+  }
+  .list-new span {
+    display: inline-block;
+    width: 46px;
+    line-height: 46px;
+    border-radius: 100%;
+    background: green;
+    color: #fff;
+  }
+  .column {
+    width: calc(100% - 56px);
+    margin-left: 10px;
+  }
+  .baslik {
+    font-size: 19px;
+  }
+  .lorem {
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .divcontainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .list-new {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 25% !important;
+    max-width: 310px;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .lorem {
+    position: relative;
+    top: 0px;
+    left: 0;
+  }
+}
+.ana {
+  height: 500px;
+}
+img {
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 500px;
+  opacity: 0.8;
+}
+.contain h2,
+.contain p {
+  color: #fff;
+}
+.contain h2 {
+  font-size: 48px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.img-contain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.contain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 40px;
+  gap: 5px;
+  height: 500px;
+  width: 100%;
+}
+.contain.right  {
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  padding-right: 40px;
+  gap: 5px;
+}
+
+.btn {
+  display: flex;
+}
+.read {
+  padding: 1rem 2rem;
+  margin-top: 30px;
+  border-radius: 30px;
+  margin-right: 5px;
+  border: none;
+  line-height: 20px;
+  background: #09a223;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+.contact {
+  padding: 1rem 2rem;
+  margin-left: 5px;
+  margin-top: 30px;
+  border-radius: 30px;
+  border: none;
+  line-height: 20px;
+  background: #fff;
+  color: #101010;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+.right p {
+  color: #000;
+}
+
+.divcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slider-list {
+  border-bottom: 1px solid #ccc;
+}
+/* .right p{
+    position: relative;
+    left: 170px;
+    top: 200px;
+  }
+  .right h2{
+    position: relative;
+    top: 150px;
+    left: 170px;
+  } 
+     */

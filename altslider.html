@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+
+<body>
+  <div class="divcontainer">
+    <div class="contain left">
+      <h2>Money Doesnt <br />Come Witout Care</h2>
+      <p>
+        Finding your next financial Advisor is easy <br />as counting from
+        one to five.
+      </p>
+      <div class="img-contain"><img src="http://advisor.brighthemes.biz/demo/wp-content/uploads/2016/07/1.jpg" alt="" />
+      </div>
+      <div class="btn">
+        <button class="read">READ MORE</button>
+        <button class="contact">CONTACT US</button>
+      </div>
+    </div>
+    <div class="contain right">
+      <h2>Assistance <br />Section</h2>
+      <p>
+        With over 15 years of experience we’ll ensure you always get the
+        best<br />
+        guidance. we’re with you every step of the way
+      </p>
+      <div class="img-contain"><img src="http://advisor.brighthemes.biz/demo/wp-content/uploads/2016/07/2.jpg" alt="" />
+      </div>
+      <div class="btn">
+        <button class="read">READ MORE</button>
+        <button class="contact">CONTACT US</button>
+      </div>
+    </div>
+    <div class="contain center">
+      <h2>Experience is <br />Evereything</h2>
+      <p>
+        Finding your next financial Advisor is easy as counting from one
+        to five.
+      </p>
+      <div class="img-contain"><img src="http://advisor.brighthemes.biz/demo/wp-content/uploads/2016/07/3.jpg" alt="" />
+      </div>
+      <div class="btn">
+        <button class="read">READ MORE</button>
+        <button class="contact">CONTACT US</button>
+      </div>
+    </div>
+    <div class="contain " id="end">
+      <h2>Client Investiment<br />Guidance</h2>
+      <p>
+        Finding your next financial Advisor is easy as counting from one
+        to five.
+      </p>
+      <div class="img-contain"><img src="http://advisor.brighthemes.biz/demo/wp-content/uploads/2016/07/4.jpg" alt="" />
+      </div>
+      <div class="btn">
+        <button class="read">READ MORE</button>
+        <button class="contact">CONTACT US</button>
+      </div>
+    </div>
+  </div>
+  <div class="slider-list">
+  <div class="divcontainer">
+    <div class="list-new active">
+      <span class="no" id="nu">1</span>
+      <div class="column">
+        <a href="#" class="baslik">Money Careeee</a>
+        <p class="lorem">Lorem ipsum dolor sit amettt.</p>
+      </div>
+    </div>
+    <div class="list-new">
+      <span class="no" id="nu">2</span>
+      <div class="column">
+        <a href="#" class="baslik">Money Careeee</a>
+        <p class="lorem">Lorem ipsum dolor sit amettt.</p>
+      </div>
+    </div>
+    <div class="list-new">
+      <span class="no" id="nu">3</span>
+      <div class="column">
+        <a href="#" class="baslik">Money Careeee</a>
+        <p class="lorem">Lorem ipsum dolor sit amettt.</p>
+      </div>
+    </div>
+    <div class="list-new">
+      <span class="no" id="nu">4</span>
+      <div class="column">
+        <a href="#" class="baslik">Money Careeee</a>
+        <p class="lorem">Lorem ipsum dolor sit amettt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <script>
+    var sliderIndex = 0;
+    window.onload = function () {
+      const sliders = document.querySelectorAll(".contain");
+      sliders.forEach((slider, i) => {
+        if (i === sliderIndex) {
+          slider.style.display = "flex";
+        } else {
+          slider.style.display = "none";
+        }
+      });
+
+      function startSlide() {
+        sliderIndex++;
+        if (sliderIndex >= 4) {
+          sliderIndex = 0;
+        }
+        console.log(sliderIndex);
+        const sliders = document.querySelectorAll(".contain");
+        sliders.forEach((slider, i) => {
+          if (i === sliderIndex) {
+            slider.style.display = "flex";
+          } else {
+            slider.style.display = "none";
+          }
+        });
+
+        const dots = document.querySelectorAll(".list-new");
+        console.log(dots);
+        dots.forEach((dot, i) => {
+          if (i === sliderIndex) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+        const spans = document.querySelectorAll(".no");
+        console.log(spans);
+        spans.forEach((span, i) => {
+          if (i === sliderIndex) {
+            span.classList.add("nu");
+          } else {
+            span.classList.remove("nu");
+          }
+        });
+      }
+
+      console.log("first");
+      let sliderInterval = setInterval(startSlide, 4000);
+
+      const dots = document.querySelectorAll(".list-new");
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", function () {
+          console.log(i);
+
+          clearInterval(sliderInterval);
+          sliderIndex = i - 1;
+          startSlide();
+          sliderInterval = setInterval(startSlide, 4000);
+        });
+      });
+    };
+    let rit = document.getElementById("end");
+    const dots = document.querySelectorAll(".list-new");
+
+    function ritt() {
+
+      if (dots[3].classList.indexOf('active') !== -1) {
+        rit.className.add("right")
+      }
+      else {
+        rit.className.remove("right");
+      }
+
+    };
+
+    ritt();
+
+
+  </script>
+</body>
+
+</html>
